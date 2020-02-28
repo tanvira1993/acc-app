@@ -1,0 +1,127 @@
+
+<section class="content">
+
+	<div class="row">
+		<div class="col-md-12">
+			<div class="box box-info">
+				<div class="box-header with-border">
+                    <h3 class="box-title">G/L Creation Panel</h3>
+                    <button type="submit" ng-click="createquotation()" class="btn btn-warning pull-right">G/L List</button>
+
+				</div>
+				<form id="register-form" class="form-horizontal" name="quotationForm" novalidate>
+					<div class="box-body">
+						<div class="form-group">
+							<label for="rate" class="col-sm-2 control-label">Select Project<span style="color: red">&nbsp;*</span></label>
+
+							<div class="col-sm-10">
+                                <select ng-change = "EnableDisable()" name="quotation_id" ng-model="quotation.quotation_id" class="form-control select2dropdown" style="width: 100%;">
+                                    <option value="">Select Requisition No.</option>
+                                    <option ng-repeat="(key, value) in quotationList" value="@{{value.requisition_no}}">@{{value.requisition_no}}</option>
+                                </select>
+							</div>
+                        </div>
+                                               
+                        <div class="form-group">
+							<label for="rate" class="col-sm-2 control-label"> G/L Type<span style="color: red">&nbsp;*</span></label>
+
+							<div class="col-sm-10">
+                                <select  name="quotation_id" ng-model="quotation.quotation_id" class="form-control select2dropdown" style="width: 100%;">
+                                    <option value="">Select Type</option>
+									<option value="">Income</option>
+                                    <option value="">Expense</option>
+                                    <option value="">Group</option>
+                                </select>
+							</div>
+						</div>
+						
+						<div class="form-group" >
+							<label for="customSpecifications" class="col-sm-2 control-label">G/L Name<span style="color: red">&nbsp;*</span></label>
+
+							<div class="col-sm-10">
+								<input type="text"  class="form-control" id="customSpecifications" name="customSpecifications" ng-model="quotation.customSpecifications" placeholder="Specification">
+							</div>
+						</div>
+
+						
+					</div>
+					<div class="box-footer">
+						<button type="submit" ng-click="createquotation()" class="btn btn-info pull-right">Create</button>
+					</div>
+				</form>
+			</div>
+			
+		</div>
+
+
+		
+	</div>
+
+	<div class="row">
+		<div class="col-md-6">
+			<div class="box box-info">
+				<div class="box-header with-border">
+                    <h3 class="box-title">Return Earning Account</h3>
+                    <button type="submit" ng-click="createquotation()" class="btn btn-warning pull-right">See Account</button>
+
+				</div>
+				<form id="register-form" class="form-horizontal" name="quotationForm" novalidate>
+					<div class="box-body">
+						
+						
+						<div class="form-group" >
+							<label for="customSpecifications" class="col-sm-2 control-label"> Name<span style="color: red">&nbsp;*</span></label>
+
+							<div class="col-sm-10">
+								<input type="text"  class="form-control" id="customSpecifications" name="customSpecifications" ng-model="quotation.customSpecifications" placeholder="Account Name">
+							</div>
+						</div>
+
+						
+					</div>
+					<div class="box-footer">
+						<button type="submit" ng-click="createquotation()" class="btn btn-info pull-right">Create</button>
+					</div>
+				</form>
+			</div>
+			
+		</div>
+
+		<div class="col-md-6">
+			<div class="box box-info">
+				<div class="box-header with-border">
+                    <h3 class="box-title">Transfer Return Earning Account</h3>
+					<button type="submit" class="btn btn-warning pull-right">Transfered Only Group G/L</button>
+
+				</div>
+				<form id="register-form" class="form-horizontal" name="quotationForm" novalidate>
+					<div class="box-body">
+						
+						
+						<div class="form-group">
+							<label for="rate" class="col-sm-2 control-label">Select G/L<span style="color: red">&nbsp;*</span></label>
+
+							<div class="col-sm-10">
+                                <select ng-change = "EnableDisable()" name="quotation_id" ng-model="quotation.quotation_id" class="form-control select2dropdown" style="width: 100%;">
+                                    <option value="">Select Requisition No.</option>
+                                    <option ng-repeat="(key, value) in quotationList" value="@{{value.requisition_no}}">@{{value.requisition_no}}</option>
+                                </select>
+							</div>
+                        </div>
+
+						
+					</div>
+					<div class="box-footer">
+						<button type="submit" ng-click="createquotation()" class="btn btn-info pull-right">Transfer</button>
+					</div>
+				</form>
+			</div>
+			
+		</div>
+
+	</div>
+	<!-- <pre>
+		@{{quotation|json}}
+	</pre>  -->
+</section>
+
