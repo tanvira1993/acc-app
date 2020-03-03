@@ -10,8 +10,8 @@
           <tr>
             <th>Project Name<br/><input ng-model="search.project_name" class="form-control input-sm"></th>
             <th>Description<br/><input ng-model="search.project_desc" class="form-control input-sm"></th>
-            <th >Expense Amount<br/><input ng-model="search.extotal" class="form-control input-sm"></th>
-            <th >Income Amount<br/><input ng-model="search.intotal" class="form-control input-sm"></th>
+            <!-- <th >Expense Amount<br/><input ng-model="search.extotal" class="form-control input-sm"></th> -->
+            <!-- <th >Income Amount<br/><input ng-model="search.intotal" class="form-control input-sm"></th> -->
             <th>Action</th>
 
           </tr>
@@ -20,8 +20,8 @@
           <tr ng-repeat="(key, value) in filteredTodosKKK | filter:{project_name: search.project_name, project_desc: search.project_desc, extotal: search.extotal,intotal: search.intotal}">
             <td>{{value.project_name}}</td>                
             <td>{{value.project_desc}}</td>      
-            <td>{{value.extotal}}</td>
-            <td>{{value.intotal}}</td>
+            <!-- <td>{{value.extotal}}</td> -->
+            <!-- <td>{{value.intotal}}</td> -->
             <td><a ui-sref="projectDetails({ id: value.project_id })"><i class="fa fa-eye" aria-hidden="true">&nbsp;View</i></a></td>
 
           </tr>
@@ -30,8 +30,8 @@
           <tr>
             <th>Project Name</th>
             <th>Description</th>
-            <th>Expense Amount</th>
-            <th>Income Amount</th>
+            <!-- <th>Expense Amount</th> -->
+            <!-- <th>Income Amount</th> -->
 
 
           </tr>

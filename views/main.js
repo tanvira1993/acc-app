@@ -51,6 +51,9 @@ accountingApp.controller('AppController', ['$scope', '$rootScope', '$location', 
 accountingApp.run(['$rootScope', '$http','$state','$window', '$filter', '$location',
 	function($rootScope, $http, $state,$window, $filter,$location) {
 		console.log('hello from template main js')
+		// $rootScope.BaseUrl = 'http://localhost:3070/'
 		$rootScope.BaseUrl = 'https://acc-app-server.herokuapp.com/'
-		
+
+		//https://stackoverflow.com/questions/20508898/how-can-i-import-a-sql-file-into-my-heroku-postgres-database
+		//heroku pg:psql --app YOUR_APP_NAME_HERE < updates.sql // upload sql file
 	}]);
