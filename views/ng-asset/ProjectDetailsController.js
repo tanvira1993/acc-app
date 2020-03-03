@@ -33,5 +33,33 @@ angular.module('accountingApp').controller('ProjectDetailsController', ['$scope'
         }
         $scope.getAllIncomeList()
 
+        $scope.getTotalIncome= function ()
+        {
+            $http({
+                method: 'get',
+                url: $rootScope.BaseUrl+'TotalAmounts/' +$scope.id +'/' +'200',
+            }).then(function (response) {
+                $scope.income= response.data[0];
+            }, 
+            function (response) {               
+
+            });
+        }
+        $scope.getTotalIncome()
+
+        $scope.getTotalExpense= function ()
+        {
+            $http({
+                method: 'get',
+                url: $rootScope.BaseUrl+'TotalAmounts/' +$scope.id +'/' +'100',
+            }).then(function (response) {
+                $scope.expense= response.data[0];
+            }, 
+            function (response) {               
+
+            });
+        }
+        $scope.getTotalExpense()
+
     });
 }]);
