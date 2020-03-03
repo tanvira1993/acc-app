@@ -40,16 +40,17 @@ var accountingApp = angular.module("accountingApp", [
 //  	return interceptor;
 //  }]);
 
- /* Setup App Main Controller */
- accountingApp.controller('AppController', ['$scope', '$rootScope', '$location', '$timeout', '$http','$stateParams','$window',function($scope, $rootScope, $location, $timeout, $http,$stateParams,$window) {
- 	$scope.$on('$viewContentLoaded', function() {
+/* Setup App Main Controller */
+accountingApp.controller('AppController', ['$scope', '$rootScope', '$location', '$timeout', '$http','$stateParams','$window',function($scope, $rootScope, $location, $timeout, $http,$stateParams,$window) {
+	$scope.$on('$viewContentLoaded', function() {
 
- 	});
- }]);
+	});
+}]);
 
- /* Setup App run functions*/
- accountingApp.run(['$rootScope', '$http','$state','$window', '$filter', '$location',
- 	function($rootScope, $http, $state,$window, $filter,$location) {
+/* Setup App run functions*/
+accountingApp.run(['$rootScope', '$http','$state','$window', '$filter', '$location',
+	function($rootScope, $http, $state,$window, $filter,$location) {
 		console.log('hello from template main js')
- 		
- 	}]);
+		$rootScope.BaseUrl = 'https://acc-app-server.herokuapp.com/'
+		
+	}]);
