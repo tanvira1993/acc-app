@@ -2,7 +2,7 @@
 angular.module('accountingApp').controller('GlListController', ['$scope', '$rootScope', '$location', '$timeout', '$http', function($scope, $rootScope, $location, $timeout, $http) {
 	$scope.$on('$viewContentLoaded', function() {
         // initialize core components
-          $scope.filteredTodosKKK = []
+        $scope.filteredTodosKKK = []
         ,$scope.currentPageKKK = 1
         ,$scope.numPerPageKKK = 10
         ,$scope.maxSizeKKK = 5; 
@@ -23,6 +23,19 @@ angular.module('accountingApp').controller('GlListController', ['$scope', '$root
             }, function (response) {                
             });
 
+        }
+
+        $scope.DeleteExpenses = function(id){
+            console.log("id=>",id);
+
+            $http({
+                method: 'get',
+                url: $rootScope.BaseUrl+'deleteGl/'+id
+            }).then(function (response) {
+                $scope.expenseList = response.data;
+                $scope.ExpenseList()
+            }, function (response) {                
+            });
         }
         $scope.ExpenseList()
     });

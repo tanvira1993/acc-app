@@ -22,7 +22,7 @@
             <td>{{value.project_desc}}</td>      
             <!-- <td>{{value.extotal}}</td> -->
             <!-- <td>{{value.intotal}}</td> -->
-            <td><a ui-sref="projectDetails({ id: value.project_id })"><i class="fa fa-eye" aria-hidden="true">&nbsp;View</i></a></td>
+            <td><a ui-sref="projectDetails({ id: value.project_id })"><i class="fa fa-eye" aria-hidden="true">&nbsp;View</i></a><a style="margin-left: 12px"><i class="fa fa-trash" style="color: red; cursor: pointer;" ng-click="DeleteExpenses(value.project_id)" aria-hidden="true">&nbsp;Delete</i></a></td>
 
           </tr>
         </tbody>

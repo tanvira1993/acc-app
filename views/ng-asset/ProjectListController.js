@@ -25,6 +25,19 @@ angular.module('accountingApp').controller('ProjectListController', ['$scope', '
         	});
 
         }
+
+         $scope.DeleteExpenses = function(id){
+            console.log("id=>",id);
+
+            $http({
+                method: 'get',
+                url: $rootScope.BaseUrl+'deleteProject/'+id
+            }).then(function (response) {
+                $scope.expenseList = response.data;
+                $scope.ExpenseList()
+            }, function (response) {                
+            });
+        }
         $scope.ExpenseList()
         
     });

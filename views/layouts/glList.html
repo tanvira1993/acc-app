@@ -13,6 +13,7 @@
             <th >Project Name<br/><input ng-model="search.project_name" class="form-control input-sm"></th>
             <th >Project Description<br/><input ng-model="search.project_desc" class="form-control input-sm"></th>
             <th >G/L Date<br/><input ng-model="search.date" placeholder="year-month-date" class="form-control input-sm"></th>
+            <th>Action</th>
 
           </tr>
         </thead>
@@ -23,6 +24,7 @@
             <td>{{value.project_name}}</td>
             <td>{{value.project_desc}}</td>
             <td>{{value.date}}</td>
+            <td><a><i class="fa fa-trash" style="color: red; cursor: pointer;" ng-click="DeleteExpenses(value.gl_id)" aria-hidden="true">&nbsp;Delete</i></a></td>
 
           </tr>
         </tbody>
