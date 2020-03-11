@@ -23,7 +23,7 @@
             <td>{{value.gl_name}}</td>      
             <td>{{value.amount}}</td>
             <td>{{value.description}}</td>
-            <td>{{value.created_at}}</td>
+            <td>{{value.created_at | date:'yyyy-MM-dd HH:mm:ss'}}</td>
             <td><a><i class="fa fa-trash" style="color: red; cursor: pointer;"  ng-click="DeleteExpensesId(value.income_id)" data-toggle="modal" data-target="#modal-danger" aria-hidden="true">&nbsp;Delete</i></a></td>
 
           </tr>
